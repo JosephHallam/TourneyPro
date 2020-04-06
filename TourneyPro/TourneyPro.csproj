@@ -341,10 +341,11 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\SiteUser\Index.cshtml" />
+    <Content Include="Views\SiteUser\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\SiteUser\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
