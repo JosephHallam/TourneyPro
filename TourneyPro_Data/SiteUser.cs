@@ -18,6 +18,6 @@ namespace TourneyPro_Data
         [Required]
         public DateTime BirthDate { get; set; }
         public bool IsVerified { get; set; }
-        public ICollection<Attendance> Attendance { get; set; }
+   //     public ICollection<Attendance> Attendance { get; set; }
     }
 }
