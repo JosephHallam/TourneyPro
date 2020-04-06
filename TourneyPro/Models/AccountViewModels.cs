@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace TourneyPro.Models
@@ -79,6 +80,9 @@ namespace TourneyPro.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+        public string Name { get; set; }
+        public string Username { get; set; }
+        public DateTime BirthDate { get; set; }
     }
 
     public class ResetPasswordViewModel
