@@ -28,6 +28,8 @@ namespace TourneyPro.Controllers
         [HttpPost]
         public ActionResult Create(Attendance model)
         {
+            model.EventName = model.Event.Name;
+            model.UserName = model.SiteUser.Name;
             var service = GetService();
             if (ModelState.IsValid)
             {
