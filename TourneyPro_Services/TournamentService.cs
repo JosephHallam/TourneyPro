@@ -35,7 +35,7 @@ namespace TourneyPro_Services
                 var list = ctx.Tournaments.Where(e => e.Id != 0).Select(e => new TourneyPro_Models.TournamentDetailAndListItem
                 {
                     Id = e.Id,
-                    ListOfEventNames = e.ListOfEventNames,
+                   // ListOfEventNames = e.ListOfEventNames,
                     Name = e.Name,
                     TournamentBeginning = e.TournamentBeginning
                 });

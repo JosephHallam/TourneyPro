@@ -35,6 +35,14 @@ namespace TourneyPro.Models
         public DbSet<Event> Events { get; set; }
         public DbSet<Attendance> Attendances { get; set; }
         public DbSet<SiteUser> SiteUsers { get; set; }
+
+        public System.Data.Entity.DbSet<TourneyPro_Models.SiteUserEdit> SiteUserEdits { get; set; }
+
+        public System.Data.Entity.DbSet<TourneyPro_Models.SiteUserDetail> SiteUserDetails { get; set; }
+
+        public System.Data.Entity.DbSet<TourneyPro_Models.TournamentDetailAndListItem> TournamentDetailAndListItems { get; set; }
+
+        public System.Data.Entity.DbSet<TourneyPro_Models.TournamentEdit> TournamentEdits { get; set; }
     }
 
     public class IdentityUserLoginConfiguration : EntityTypeConfiguration<IdentityUserLogin>
