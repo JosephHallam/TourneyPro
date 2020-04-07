@@ -40,6 +40,14 @@ namespace TourneyPro_Services
                 }
             }
         }
+        public IEnumerable<Event> GetAllEvents()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var list = ctx.Events.ToList();
+                return list;
+            }
+        }
         public IEnumerable<TourneyPro_Models.EventListItem> GetEventsForTournament(int id)
         {
             using (var ctx = new ApplicationDbContext())
