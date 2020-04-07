@@ -95,6 +95,10 @@
     <Compile Include="Migrations\202004071740535_Initial.designer.cs">
       <DependentUpon>202004071740535_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004071849504_updateEventFields.cs" />
+    <Compile Include="Migrations\202004071849504_updateEventFields.designer.cs">
+      <DependentUpon>202004071849504_updateEventFields.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="SiteUser.cs" />
     <Compile Include="Tournament.cs" />
@@ -116,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004071740535_Initial.resx">
       <DependentUpon>202004071740535_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004071849504_updateEventFields.resx">
+      <DependentUpon>202004071849504_updateEventFields.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

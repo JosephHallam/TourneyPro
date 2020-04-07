@@ -35,3 +35,4 @@ C:\ElevenFiftyProjects\DotNetProjects\TourneyPro\TourneyPro_Data\bin\Debug\Tourn
 C:\ElevenFiftyProjects\DotNetProjects\TourneyPro\TourneyPro_Data\obj\Debug\TourneyPro_Data.Migrations.InitialCreate.resources
 C:\ElevenFiftyProjects\DotNetProjects\TourneyPro\TourneyPro_Data\obj\Debug\TourneyPro_Data.csproj.GenerateResource.cache
 C:\ElevenFiftyProjects\DotNetProjects\TourneyPro\TourneyPro_Data\obj\Debug\TourneyPro_Data.Migrations.Initial.resources
+C:\ElevenFiftyProjects\DotNetProjects\TourneyPro\TourneyPro_Data\obj\Debug\TourneyPro_Data.Migrations.updateEventFields.resources

@@ -27,6 +27,8 @@ namespace TourneyPro_Data
         public decimal EventFee { get; set; }
         [Required]
         public DateTime EventBeginning { get; set; }
+        [Display(Name ="Tournament Name")]
+        public string TournamentName { get; set;}
         //[Required]
         //public DateTime EventEnd { get; set; }
         //public TimeSpan TimeSpan { get

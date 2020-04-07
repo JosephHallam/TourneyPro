@@ -42,6 +42,7 @@ namespace TourneyPro.Controllers
                 {
                     return View(model);
                 }
+                model.TournamentName = model.Tournament.Name;
                 tournament.ListOfEventNames = nameString;
                 ctx.Events.Add(model);
                 ctx.SaveChanges();
