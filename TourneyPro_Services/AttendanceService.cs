@@ -19,6 +19,9 @@ namespace TourneyPro_Services
         {
             using (var ctx = new ApplicationDbContext())
             {
+                try
+                {
+
                 Attendance attendance = new Attendance();
                 attendance.EventId = model.EventId;
                 attendance.SiteUserId = model.SiteUserId;
@@ -27,6 +30,11 @@ namespace TourneyPro_Services
                 attendance.SiteUser = ctx.SiteUsers.Where(e => e.Id == attendance.SiteUserId).SingleOrDefault();
                 ctx.Attendances.Add(attendance);
                 return ctx.SaveChanges() == 1;
+                }
+                catch
+                {
+                    return false;
+                }
             }
         }
         public IEnumerable<TourneyPro_Models.AttendanceDetailAndListItem> GetAllAttendancesForPlayer(int id)
@@ -61,20 +69,36 @@ namespace TourneyPro_Services
         {
             using (var ctx = new ApplicationDbContext())
             {
+                try
+                {
+
                 var item = ctx.Attendances.Where(e => e.Id == model.Id).SingleOrDefault();
                 item.SiteUserId = model.SiteUserId;
                 item.EventId = model.EventId;
                 item.isPlayer = model.IsPlayer;
                 return ctx.SaveChanges() == 1;
+                }
+                catch
+                {
+                    return false;
+                }
             }
         }
         public bool DeleteAttendance(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
+                try
+                {
+
                 var item = ctx.Attendances.Where(e => e.Id == id).SingleOrDefault();
                 ctx.Attendances.Remove(item);
                 return ctx.SaveChanges() == 1;
+                }
+                catch
+                {
+                    return false;
+                }
             }
         }
     }

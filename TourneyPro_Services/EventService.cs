@@ -19,6 +19,9 @@ namespace TourneyPro_Services
         {
             using (var ctx = new ApplicationDbContext())
             {
+                try
+                {
+
                 Event item = new Event();
                 item.Name = model.Name;
                 item.GamePlayed = model.GamePlayed;
@@ -30,6 +33,11 @@ namespace TourneyPro_Services
                 item.EventBeginning = model.EventBeginning;
                 ctx.Events.Add(item);
                 return ctx.SaveChanges() == 1;
+                }
+                catch
+                {
+                    return false;
+                }
             }
         }
         public IEnumerable<TourneyPro_Models.EventListItem> GetEventsForTournament(int id)
@@ -49,6 +57,9 @@ namespace TourneyPro_Services
         {
             using (var ctx = new ApplicationDbContext())
             {
+                try
+                {
+
                 var item = ctx.Events.Where(e => e.Id == model.Id).SingleOrDefault();
                 item.Name = model.Name;
                 item.GamePlayed = model.GamePlayed;
@@ -58,15 +69,28 @@ namespace TourneyPro_Services
                 item.EventFee = model.EventFee;
                 item.EventBeginning = model.EventBeginning;
                 return ctx.SaveChanges() == 1;
+                }
+                catch
+                {
+                    return false;
+                }
             }
         }
         public bool DeleteEvent(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
+                try
+                {
+
                 var item = ctx.Events.Where(e => e.Id == id).SingleOrDefault();
                 ctx.Events.Remove(item);
                 return ctx.SaveChanges() == 1;
+                }
+                catch
+                {
+                    return false;
+                }
             }
         }
     }

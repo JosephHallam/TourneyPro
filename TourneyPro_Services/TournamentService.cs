@@ -19,6 +19,9 @@ namespace TourneyPro_Services
         {
             using (var ctx = new ApplicationDbContext())
             {
+                try
+                {
+
                 var tournament = new Tournament()
                 {
                     Name = model.Name,
@@ -26,30 +29,29 @@ namespace TourneyPro_Services
                 };
                 ctx.Tournaments.Add(tournament);
                 return ctx.SaveChanges() == 1;
+                }
+                catch
+                {
+                    return false;
+                }
             }
         }
-        public IEnumerable<TourneyPro_Models.TournamentDetailAndListItem> GetAllTournaments()
+        public IEnumerable<Tournament> GetAllTournaments()
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var list = ctx.Tournaments.Where(e => e.Id != 0).Select(e => new TourneyPro_Models.TournamentDetailAndListItem
-                {
-                    Id = e.Id,
-                   // ListOfEventNames = e.ListOfEventNames,
-                    Name = e.Name,
-                    TournamentBeginning = e.TournamentBeginning
-                });
+                var list = ctx.Tournaments.Where(e => e.Id != 0);
                 return list.ToArray();
             }
         }
-        public IEnumerable<TourneyPro_Models.TournamentDetailAndListItem> GetAllActiveTournaments()
+        public IEnumerable<Tournament> GetAllActiveTournaments()
         {
             using (var ctx = new ApplicationDbContext())
             {
                 List<TourneyPro_Models.TournamentDetailAndListItem> tournamentList = new List<TourneyPro_Models.TournamentDetailAndListItem>();
                 var list = GetAllTournaments();
                 var goodList = list.ToList();
-                foreach(TourneyPro_Models.TournamentDetailAndListItem item in list)
+                foreach(Tournament item in list)
                 {
                     TimeSpan timespan = item.TournamentBeginning - DateTime.Now;
                     if(timespan > DateTime.Now-DateTime.Now)
@@ -64,19 +66,34 @@ namespace TourneyPro_Services
         {
             using (var ctx = new ApplicationDbContext())
             {
+                try
+                {
                 var item = ctx.Tournaments.Where(e => e.Id == model.Id).FirstOrDefault();
                 item.Name = model.Name;
                 item.TournamentBeginning = model.TournamentBeginning;
                 return ctx.SaveChanges() == 1;
+                }
+                catch
+                {
+                    return false;
+                }
             }
         }
         public bool DeleteTournament(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
+                try
+                {
+
                 var item = ctx.Tournaments.Where(e => e.Id == id).FirstOrDefault();
                 ctx.Tournaments.Remove(item);
                 return ctx.SaveChanges() == 1;
+                }
+                catch
+                {
+                    return false;
+                }
             }
         }
     }

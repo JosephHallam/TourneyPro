@@ -1,4 +1,4 @@
-﻿@model TourneyPro_Models.TournamentEdit
+﻿@model TourneyPro_Data.Tournament
 
 @{
     ViewBag.Title = "Edit";
@@ -27,7 +27,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.TournamentBeginning, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.TournamentBeginning, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.TournamentBeginning, new { htmlAttributes = new { @class = "datefield", type = "date" } })
                 @Html.ValidationMessageFor(model => model.TournamentBeginning, "", new { @class = "text-danger" })
             </div>
         </div>

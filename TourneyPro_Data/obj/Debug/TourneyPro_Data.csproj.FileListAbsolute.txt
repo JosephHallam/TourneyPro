@@ -29,3 +29,9 @@ C:\ElevenFiftyProjects\DotNetProjects\TourneyPro\TourneyPro_Data\bin\Debug\Micro
 C:\ElevenFiftyProjects\DotNetProjects\TourneyPro\TourneyPro_Data\bin\Debug\Newtonsoft.Json.xml
 C:\ElevenFiftyProjects\DotNetProjects\TourneyPro\TourneyPro_Data\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
 C:\ElevenFiftyProjects\DotNetProjects\TourneyPro\TourneyPro_Data\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\ElevenFiftyProjects\DotNetProjects\TourneyPro\TourneyPro_Data\bin\Debug\TourneyPro_Models.dll
+C:\ElevenFiftyProjects\DotNetProjects\TourneyPro\TourneyPro_Data\bin\Debug\TourneyPro_Models.pdb
+C:\ElevenFiftyProjects\DotNetProjects\TourneyPro\TourneyPro_Data\bin\Debug\TourneyPro_Models.dll.config
+C:\ElevenFiftyProjects\DotNetProjects\TourneyPro\TourneyPro_Data\obj\Debug\TourneyPro_Data.Migrations.InitialCreate.resources
+C:\ElevenFiftyProjects\DotNetProjects\TourneyPro\TourneyPro_Data\obj\Debug\TourneyPro_Data.csproj.GenerateResource.cache
+C:\ElevenFiftyProjects\DotNetProjects\TourneyPro\TourneyPro_Data\obj\Debug\TourneyPro_Data.Migrations.Initial.resources

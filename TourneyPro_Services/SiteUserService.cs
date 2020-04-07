@@ -27,8 +27,16 @@ namespace TourneyPro_Services
             };
             using (var ctx = new ApplicationDbContext())
             {
+                try
+                {
+
                 ctx.SiteUsers.Add(user);
                 return ctx.SaveChanges() == 1;
+                }
+                catch
+                {
+                    return false;
+                }
             }
         }
         public IEnumerable<SiteUserListItem> GetAllUsers()
@@ -63,19 +71,35 @@ namespace TourneyPro_Services
         {
             using (var ctx = new ApplicationDbContext())
             {
+                try
+                {
+
                 var item = ctx.SiteUsers.Where(e => e.Id == id).SingleOrDefault();
                 ctx.SiteUsers.Remove(item);
                 return ctx.SaveChanges() == 1;
+                }
+                catch
+                {
+                    return false;
+                }
             }
         }
         public bool UpdateUser(SiteUserEdit model)
         {
             using (var ctx = new ApplicationDbContext())
             {
+                try
+                {
+
                 var item = ctx.SiteUsers.Where(e => e.Id == model.Id).SingleOrDefault();
                 item.Name = model.Name;
                 item.Username = model.Username;
                 return ctx.SaveChanges() == 1;
+                }
+                catch
+                {
+                    return false;
+                }
             }
         }
     }

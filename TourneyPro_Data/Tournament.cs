@@ -15,10 +15,6 @@ namespace TourneyPro_Data
         public string Name { get; set; }
         [Required]
         public DateTime TournamentBeginning { get; set; }
-        public ICollection<Event> Events { get; set; }
-        public string ListOfEventNames { get
-            {
-                return string.Join(", ", Events);
-            } }
+        public string ListOfEventNames { get; set; }
     }
 }

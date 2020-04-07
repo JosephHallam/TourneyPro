@@ -33,7 +33,6 @@ namespace TourneyPro.Controllers
                 var item = new Tournament();
                 item.Name = model.Name;
                 item.TournamentBeginning = model.TournamentBeginning;
-                item.Events = new List<Event>();
                 ctx.Tournaments.Add(item);
                 ctx.SaveChanges();
                 return RedirectToAction("Index");
