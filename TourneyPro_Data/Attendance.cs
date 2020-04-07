@@ -19,5 +19,9 @@ namespace TourneyPro_Data
         public int EventId { get; set; }
         public virtual Event Event { get; set; }
         public bool isPlayer { get; set; }
+        [Display(Name ="Event Name")]
+        public string EventName { get; set; }
+        [Display(Name ="SiteUser Name")]
+        public string UserName { get; set; }
     }
 }

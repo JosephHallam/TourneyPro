@@ -15,21 +15,16 @@ namespace TourneyPro_Services
         {
             _userId = id;
         }
-        public bool CreateAttendance(TourneyPro_Models.AttendanceCreate model)
+        public bool CreateAttendance(Attendance model)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 try
                 {
-
-                Attendance attendance = new Attendance();
-                attendance.EventId = model.EventId;
-                attendance.SiteUserId = model.SiteUserId;
-                attendance.isPlayer = model.IsPlayer;
-                attendance.Event = ctx.Events.Where(e => e.Id == attendance.EventId).SingleOrDefault();
-                attendance.SiteUser = ctx.SiteUsers.Where(e => e.Id == attendance.SiteUserId).SingleOrDefault();
-                ctx.Attendances.Add(attendance);
-                return ctx.SaveChanges() == 1;
+                    model.Event = ctx.Events.Where(e => e.Id == model.EventId).SingleOrDefault();
+                    model.SiteUser = ctx.SiteUsers.Where(e => e.Id == model.SiteUserId).SingleOrDefault();
+                    ctx.Attendances.Add(model);
+                    return ctx.SaveChanges() == 1;
                 }
                 catch
                 {
@@ -72,11 +67,11 @@ namespace TourneyPro_Services
                 try
                 {
 
-                var item = ctx.Attendances.Where(e => e.Id == model.Id).SingleOrDefault();
-                item.SiteUserId = model.SiteUserId;
-                item.EventId = model.EventId;
-                item.isPlayer = model.IsPlayer;
-                return ctx.SaveChanges() == 1;
+                    var item = ctx.Attendances.Where(e => e.Id == model.Id).SingleOrDefault();
+                    item.SiteUserId = model.SiteUserId;
+                    item.EventId = model.EventId;
+                    item.isPlayer = model.IsPlayer;
+                    return ctx.SaveChanges() == 1;
                 }
                 catch
                 {
@@ -91,9 +86,9 @@ namespace TourneyPro_Services
                 try
                 {
 
-                var item = ctx.Attendances.Where(e => e.Id == id).SingleOrDefault();
-                ctx.Attendances.Remove(item);
-                return ctx.SaveChanges() == 1;
+                    var item = ctx.Attendances.Where(e => e.Id == id).SingleOrDefault();
+                    ctx.Attendances.Remove(item);
+                    return ctx.SaveChanges() == 1;
                 }
                 catch
                 {
