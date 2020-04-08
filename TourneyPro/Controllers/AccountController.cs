@@ -156,6 +156,7 @@ namespace TourneyPro.Controllers
                 {
 
                     TourneyPro_Data.SiteUser siteUser = new SiteUser();
+                    siteUser.Email = model.Email;
                     siteUser.Name = model.Name;
                     siteUser.Username = model.Username;
                     siteUser.BirthDate = model.BirthDate;

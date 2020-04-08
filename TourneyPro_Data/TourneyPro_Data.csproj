@@ -103,6 +103,10 @@
     <Compile Include="Migrations\202004071939225_updateAttendanceFields.designer.cs">
       <DependentUpon>202004071939225_updateAttendanceFields.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004081533543_AddedSiteUserEmail.cs" />
+    <Compile Include="Migrations\202004081533543_AddedSiteUserEmail.designer.cs">
+      <DependentUpon>202004081533543_AddedSiteUserEmail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="SiteUser.cs" />
     <Compile Include="Tournament.cs" />
@@ -130,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004071939225_updateAttendanceFields.resx">
       <DependentUpon>202004071939225_updateAttendanceFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004081533543_AddedSiteUserEmail.resx">
+      <DependentUpon>202004081533543_AddedSiteUserEmail.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
