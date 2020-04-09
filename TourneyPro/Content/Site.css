@@ -22,3 +22,16 @@ select,
 textarea {
     max-width: 280px;
 }
+#layoutListButton{
+    height : 20px;
+    width : 20px;
+    opacity: 0;
+    z-index: 5;
+}
+#collapseButton{
+    height: 50px;
+    width: 50px;
+    position:relative;
+    left: 35px;
+    bottom: 2px;
+}
