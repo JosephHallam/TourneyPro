@@ -32,6 +32,7 @@ namespace TourneyPro.Controllers
             {
                 var item = new Tournament();
                 item.Name = model.Name;
+                item.TrailerEmbedLink = model.TrailerEmbedLink;
                 item.TournamentBeginning = model.TournamentBeginning;
                 ctx.Tournaments.Add(item);
                 ctx.SaveChanges();
@@ -106,6 +107,11 @@ namespace TourneyPro.Controllers
         {
             var userId = User.Identity.GetUserId();
             var Id = new Guid(userId);
+            if(Id == null)
+            {
+                var badGuid = new Guid();
+                return new TournamentService(badGuid);
+            }
             var service = new TournamentService(Id);
             return service;
         }

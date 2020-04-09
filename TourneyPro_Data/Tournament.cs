@@ -16,5 +16,6 @@ namespace TourneyPro_Data
         [Required]
         public DateTime TournamentBeginning { get; set; }
         public string ListOfEventNames { get; set; }
+        public string TrailerEmbedLink { get; set; }
     }
 }

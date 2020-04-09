@@ -38,3 +38,4 @@ C:\ElevenFiftyProjects\DotNetProjects\TourneyPro\TourneyPro_Data\obj\Debug\Tourn
 C:\ElevenFiftyProjects\DotNetProjects\TourneyPro\TourneyPro_Data\obj\Debug\TourneyPro_Data.Migrations.updateEventFields.resources
 C:\ElevenFiftyProjects\DotNetProjects\TourneyPro\TourneyPro_Data\obj\Debug\TourneyPro_Data.Migrations.updateAttendanceFields.resources
 C:\ElevenFiftyProjects\DotNetProjects\TourneyPro\TourneyPro_Data\obj\Debug\TourneyPro_Data.Migrations.AddedSiteUserEmail.resources
+C:\ElevenFiftyProjects\DotNetProjects\TourneyPro\TourneyPro_Data\obj\Debug\TourneyPro_Data.Migrations.AddYTColumnTournament.resources

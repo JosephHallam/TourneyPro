@@ -11,6 +11,7 @@ namespace TourneyPro_Models
     {
         public string Name { get; set; }
         public DateTime TournamentBeginning { get; set; }
+        public string TrailerEmbedLink { get; set; }
     }
     public class TournamentEdit
     {

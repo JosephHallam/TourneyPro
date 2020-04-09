@@ -107,6 +107,10 @@
     <Compile Include="Migrations\202004081533543_AddedSiteUserEmail.designer.cs">
       <DependentUpon>202004081533543_AddedSiteUserEmail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004091410230_AddYTColumnTournament.cs" />
+    <Compile Include="Migrations\202004091410230_AddYTColumnTournament.designer.cs">
+      <DependentUpon>202004091410230_AddYTColumnTournament.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="SiteUser.cs" />
     <Compile Include="Tournament.cs" />
@@ -137,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004081533543_AddedSiteUserEmail.resx">
       <DependentUpon>202004081533543_AddedSiteUserEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004091410230_AddYTColumnTournament.resx">
+      <DependentUpon>202004091410230_AddYTColumnTournament.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
