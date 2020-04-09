@@ -48,40 +48,6 @@ namespace TourneyPro.Controllers
             }
             return View(model);
         }
-        [HttpGet]
-        public ActionResult CreateFromInfo()
-        {
-            var siteUser = ctx.SiteUsers.Where(e => e.Email == User.Identity.Name).SingleOrDefault();
-            if(siteUser == null)
-            {
-                return View();
-            }
-            var SiteUserId = siteUser.Id;
-            return View(SiteUserId);
-        }
-        [HttpPost]
-        public ActionResult CreateFromInfo(Attendance model)
-        {
-            model.Event = ctx.Events.Find(model.EventId);
-            model.SiteUser = ctx.SiteUsers.Find(model.SiteUserId);
-            if (model.SiteUser == null || model.Event == null)
-            {
-                return HttpNotFound("Either the Event or the SiteUser could not be found. Please try again.");
-            }
-            model.EventName = model.Event.Name;
-            model.UserName = model.SiteUser.Name;
-            var service = GetService();
-            if (ModelState.IsValid)
-            {
-                var succeeded = service.CreateAttendance(model);
-                if (succeeded)
-                {
-                    return RedirectToAction("Index");
-                }
-                return new HttpStatusCodeResult(System.Net.HttpStatusCode.InternalServerError);
-            }
-            return View(model);
-        }
         public ActionResult Delete(int? id)
         {
             if (id == null)
