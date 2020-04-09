@@ -14,9 +14,15 @@ namespace TourneyPro.Controllers
     {
         private ApplicationDbContext ctx = new ApplicationDbContext();
         // GET: Tournament
-        public ActionResult Index()
+        public ActionResult Index(string searchString)
         {
             var service = GetService();
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                var list = ctx.Tournaments.Where(e => e.Name.Contains(searchString));
+                var orderedList = list.OrderBy(e => e.TournamentBeginning).ToList();
+                return View(orderedList);
+            }
             var array = service.GetAllActiveTournaments();
             var ordered = array.OrderBy(e => e.TournamentBeginning).ToList();
             return View(ordered);
