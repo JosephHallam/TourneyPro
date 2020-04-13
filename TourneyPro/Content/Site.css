@@ -35,3 +35,6 @@ textarea {
     left: 35px;
     bottom: 2px;
 }
+#collapseButton:hover{
+    transform: rotate(360deg);
+}

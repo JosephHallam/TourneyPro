@@ -8,9 +8,41 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <style>
+        #layoutListButton{
+    height : 65px;
+    width : 65px;
+    opacity: 0;
+    z-index: 5;
+    position: relative;
+    top: 30px;
+    right: 33px;
+}
+#collapseButton{
+    height: 80px;
+    width: 80px;
+    position:relative;
+    left: 35px;
+    bottom: -5px;
+}
         #LayoutLogo{
-            width: 55%;
-            height: 10%;
+            position:relative;
+            left: 10%;
+            width: 30%;
+            height: 7%;
+        }
+        body{
+            background-color: lightblue;
+        }
+        .navbar-header{
+            background-color: #e9ecef;
+            width: 100%;
+            border-top-left-radius: 0.3rem;
+            border-top-right-radius: 0.3rem;
+        }
+        .navbar-collapse{
+            background-color: #e9ecef;
+            border-bottom-left-radius: 0.3rem;
+            border-bottom-right-radius: 0.3rem;
         }
     </style>
 
