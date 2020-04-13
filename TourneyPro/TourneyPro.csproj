@@ -190,6 +190,7 @@
     <Content Include="AssetsFolder\CollapseButtonCropped.png" />
     <Content Include="AssetsFolder\menu-icon-png-3-lines-11552739327ppx0vqjddk.png" />
     <Content Include="AssetsFolder\output-onlinepngtools %282%29.png" />
+    <Content Include="AssetsFolder\TournamentProTransparent.png" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
