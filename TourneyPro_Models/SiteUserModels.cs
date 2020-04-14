@@ -30,5 +30,6 @@ namespace TourneyPro_Models
         public string Name { get; set; }
         public string Username { get; set; }
         public bool IsVerified { get; set; }
+        public byte[] Image { get; set; }
     }
 }

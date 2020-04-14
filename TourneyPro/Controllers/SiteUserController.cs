@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -20,6 +22,7 @@ namespace TourneyPro.Controllers
             var ordered = list.OrderBy(e => e.Username).ToList();
             return View(ordered);
         }
+
         //GET Delete
         public ActionResult Delete(int? id)
         {
@@ -86,6 +89,7 @@ namespace TourneyPro.Controllers
                 return HttpNotFound();
             }
             TourneyPro_Models.SiteUserDetail details = new TourneyPro_Models.SiteUserDetail();
+            details.Image = user.Image;
             details.Id = user.Id;
             details.Name = user.Name;
             details.Username = user.Username;

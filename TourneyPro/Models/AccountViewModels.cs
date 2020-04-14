@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Web;
 
 namespace TourneyPro.Models
 {
@@ -83,6 +84,7 @@ namespace TourneyPro.Models
         public string Name { get; set; }
         public string Username { get; set; }
         public DateTime BirthDate { get; set; }
+        public HttpPostedFileBase Image { get; set; }
     }
 
     public class ResetPasswordViewModel

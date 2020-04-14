@@ -161,6 +161,15 @@ namespace TourneyPro.Controllers
                     siteUser.Username = model.Username;
                     siteUser.BirthDate = model.BirthDate;
                     siteUser.IsVerified = false;
+                    if(model.Image != null)
+                    {
+                        using (System.IO.MemoryStream ms = new System.IO.MemoryStream())
+                        {
+                            model.Image.InputStream.CopyTo(ms);
+                            byte[] array = ms.GetBuffer();
+                            siteUser.Image = array;
+                        }
+                    }
                     ctx.SiteUsers.Add(siteUser);
                     bool siteUserResult = ctx.SaveChanges() == 1;
                     var user = new ApplicationUser { UserName = model.Email, Email = model.Email };

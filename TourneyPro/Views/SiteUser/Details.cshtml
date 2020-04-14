@@ -5,6 +5,17 @@
 }
 
 <h2>Details</h2>
+@{
+    @*System.Drawing.Image image;
+    using (MemoryStream ms = new MemoryStream(Model.Image))
+    {
+        image = System.Drawing.Image.FromStream(ms);
+    }
+    var goodImage = (System.Drawing.Bitmap)image;
+    @Html.RenderAction(goodImage);*@
+}
+
+
 
 <div>
     <h4>SiteUserDetail</h4>
@@ -37,7 +48,7 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Browse Tournament Attendance", "Index", "Attendance", new {id = Model.Id }, new { Style = "color:Black;" }) |
+    @Html.ActionLink("Browse Tournament Attendance", "Index", "Attendance", new { id = Model.Id }, new { Style = "color:Black;" }) |
     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

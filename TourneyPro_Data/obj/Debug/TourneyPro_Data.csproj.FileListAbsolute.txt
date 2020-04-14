@@ -39,3 +39,5 @@ C:\ElevenFiftyProjects\DotNetProjects\TourneyPro\TourneyPro_Data\obj\Debug\Tourn
 C:\ElevenFiftyProjects\DotNetProjects\TourneyPro\TourneyPro_Data\obj\Debug\TourneyPro_Data.Migrations.updateAttendanceFields.resources
 C:\ElevenFiftyProjects\DotNetProjects\TourneyPro\TourneyPro_Data\obj\Debug\TourneyPro_Data.Migrations.AddedSiteUserEmail.resources
 C:\ElevenFiftyProjects\DotNetProjects\TourneyPro\TourneyPro_Data\obj\Debug\TourneyPro_Data.Migrations.AddYTColumnTournament.resources
+C:\ElevenFiftyProjects\DotNetProjects\TourneyPro\TourneyPro_Data\obj\Debug\TourneyPro_Data.Migrations.AddedImageColumnToSiteUser.resources
+C:\ElevenFiftyProjects\DotNetProjects\TourneyPro\TourneyPro_Data\obj\Debug\TourneyPro_Data.Migrations.AddedImageColumnSiteUserDetail.resources

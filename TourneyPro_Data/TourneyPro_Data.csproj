@@ -111,6 +111,14 @@
     <Compile Include="Migrations\202004091410230_AddYTColumnTournament.designer.cs">
       <DependentUpon>202004091410230_AddYTColumnTournament.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004141847148_AddedImageColumnToSiteUser.cs" />
+    <Compile Include="Migrations\202004141847148_AddedImageColumnToSiteUser.designer.cs">
+      <DependentUpon>202004141847148_AddedImageColumnToSiteUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004141941512_AddedImageColumnSiteUserDetail.cs" />
+    <Compile Include="Migrations\202004141941512_AddedImageColumnSiteUserDetail.designer.cs">
+      <DependentUpon>202004141941512_AddedImageColumnSiteUserDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="SiteUser.cs" />
     <Compile Include="Tournament.cs" />
@@ -144,6 +152,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004091410230_AddYTColumnTournament.resx">
       <DependentUpon>202004091410230_AddYTColumnTournament.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004141847148_AddedImageColumnToSiteUser.resx">
+      <DependentUpon>202004141847148_AddedImageColumnToSiteUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004141941512_AddedImageColumnSiteUserDetail.resx">
+      <DependentUpon>202004141941512_AddedImageColumnSiteUserDetail.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
