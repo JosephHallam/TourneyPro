@@ -37,6 +37,7 @@
     </dl>
 </div>
 <p>
+    @Html.ActionLink("Browse Tournament Attendance", "Index", "Attendance", new {id = Model.Id }, new { Style = "color:Black;" }) |
     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

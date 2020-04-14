@@ -18,6 +18,7 @@ namespace TourneyPro_Data
         [Required]
         public string Username { get; set; }
         [Required]
+        [Display(Name="Birth Date")]
         public DateTime BirthDate { get; set; }
         [Display(Name="Verified User")]
         public bool IsVerified { get; set; }

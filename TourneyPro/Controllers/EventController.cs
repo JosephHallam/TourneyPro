@@ -30,6 +30,9 @@ namespace TourneyPro.Controllers
         {
             if (ModelState.IsValid)
             {
+                model.TournamentName = ctx.Tournaments.Find(model.TournamentId).Name;
+                ctx.Events.Add(model);
+                ctx.SaveChanges();
                 var nameList = new List<string>();
                 var list = ctx.Events.Where(e => e.TournamentId == model.TournamentId).ToList();
                 foreach(Event item in list)
@@ -42,10 +45,7 @@ namespace TourneyPro.Controllers
                 {
                     return View(model);
                 }
-                model.TournamentName = model.Tournament.Name;
                 tournament.ListOfEventNames = nameString;
-                ctx.Events.Add(model);
-                ctx.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(model);

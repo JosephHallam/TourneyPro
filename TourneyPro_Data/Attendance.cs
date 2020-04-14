@@ -13,11 +13,13 @@ namespace TourneyPro_Data
         [Key]
         public int Id { get; set; }
         [ForeignKey(nameof(SiteUser))]
+        [Display(Name="Site User Id")]
         public int SiteUserId { get; set; }
         public virtual SiteUser SiteUser { get; set; }
         [ForeignKey(nameof(Event))]
         public int EventId { get; set; }
         public virtual Event Event { get; set; }
+        [Display(Name="Attended as Player?")]
         public bool isPlayer { get; set; }
         [Display(Name ="Event Name")]
         public string EventName { get; set; }

@@ -3,13 +3,20 @@
 @{
     ViewBag.Title = "Index";
 }
-
+<style>
+    input{
+        border-radius: 0.5rem;
+    }
+    #filterButton:hover{
+        background-color: lightgreen; 
+    }
+</style>
 <h2>Index</h2>
 
-@Html.ActionLink("Create New Tournament", "Create", "Tournament")
+@Html.ActionLink("Create New Tournament", "Create", "Tournament",null,new { Style = "font-size: 1.2rem;"})
 <form asp-controller="Tournament" asp-action="Index">
-    <p>Tournament Name: <input type="text" name="SearchString" placeholder="Enter Tournament Name"/>
-    <input type="submit" value="Filter" />
+    <p>Tournament Name: <input type="text" name="SearchString" placeholder=""/>
+    <input type="submit" value="Filter" id="filterButton"/>
     </p>
 </form>
 <table class="table">

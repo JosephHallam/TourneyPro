@@ -1,27 +1,121 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<style>
+    /*#SWTVideo{
+        position: relative;
+        left: 20%;
+        right: 20%;
+    }*/
+    .jumbotron{
+        text-align: center;
+        background-color: #b2a354;
+    }
+    .row ul li{
+      list-style-type: none;
+      position: relative;
+      left: -8%;
+      color: black;
+    }
+    .row ul li a{
+        color: black;
+    }
+    .communityVids{
+        width: 100%;
+        height: 100%;
+    }
+    .communityWorksList{
+        display: flex;
+    }
+    #marthVid{
+        margin-left: 3%;
+    }
+    .VidCredit{
+        display: flex;
+        margin-left: 10%;
+    }
+    #NJ{
+        margin-left: 28%;
+    }
+    .CWorksList2{
+        display: flex;
+    }
+    .list2{
+        width: 78%;
+        height: 100%;
+    }
+    #ryuVid{
+        width: 135%;
+        margin-left: -30%;
+    }
+    .credit2{
+        display: flex;
+        margin-left: 10%;
+    }
+    #avani{
+        position:relative;
+        left: 265%;
+    }
+    h4{
+        text-align: center;
+    }
+    h2{
+        text-align: center;
+    }
+    #64art{
+        transition: 0.1s;
+    }
+    #64art:hover{
+        transform: scale(1.5);
+    }
+</style>
 
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <h1>Check Out The Smash World Tour 2020!</h1>
+    <p class="lead">Introducing circuits for both Super Smash Bros. Melee and Ultimate, the Smash World Tour is an international circuit spanning March to December of 2020. Earn points by travelling to and competing in Platinum, Gold, and Silver-level tournaments for the chance to win a prize pool starting at $250,000!</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/W2l_M3ywsss" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="SWTVideo"></iframe>
 </div>
 
 <div class="row">
     <div class="col-md-6">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <h4>New to the Scene? Check Out These Resources To Learn How You Can Get Involved in Your Local Scene!</h4>
+        <ul>
+            <li>Super Smash Bros. 64:</li>
+            <li><a href="https://www.reddit.com/r/ssb64/" target="_blank">https://www.reddit.com/r/ssb64/</a></li>
+            <li><p>_________________</p></li>
+            <li>Super Smash Bros. Melee:</li>
+            <li><a href="https://www.reddit.com/r/SSBM/" target="_blank">https://www.reddit.com/r/SSBM/</a></li>
+            <li><p>_________________</p></li>
+
+            <li>Super Smash Bros. Brawl:</li>
+            <li><a href="https://www.reddit.com/r/ssbb/" target="_blank">https://www.reddit.com/r/ssbb/</a></li>
+            <li><p>_________________</p></li>
+
+            <li>Super Smash Bros. Ultimate:</li>
+            <li><a href="https://www.reddit.com/r/SmashBrosUltimate/" target="_blank">https://www.reddit.com/r/SmashBrosUltimate/</a></li>
+            <li><p>_________________</p></li>
+
+            <li>Please be sure to respect all of the rules of each subreddit!</li>
+        </ul>
     </div>
     <div class="col-md-6">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <h2>Community Works</h2>
+        <ul class="communityWorksList">
+            <li><iframe width="560" height="315" src="https://www.youtube.com/embed/jGDEYsA6yoU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="communityVids"></iframe></li>
+            <li><iframe width="560" height="315" src="https://www.youtube.com/embed/FrCDWX5JBCQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="communityVids" id="marthVid"></iframe></li>
+        </ul>
+        <ul class="VidCredit">
+            <li><p>YT: Ludwig Ahgren</p></li>
+            <li id="NJ"><p>YT: Nakey Jakey</p></li>
+        </ul>
+        <ul class="CWorksList2">
+            <li ><div id="64art"><img src="~/AssetsFolder/smash64Art.png" alt="Smash 64 fan-drawn dreamland stage" class="list2" /></div></li>
+            <li><iframe width="560" height="315" src="https://www.youtube.com/embed/pvDba3Y2r8Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="list2" id="ryuVid"></iframe></li>
+        </ul>
+        <ul class="credit2">
+            <li><a href="http://billypatriss.com/" target="_blank">billypatriss.com</a></li>
+            <li><p id="avani">YT: Avani</p></li>
+        </ul>
     </div>
     @*<div class="col-md-4">
         <h2>Web Hosting</h2>

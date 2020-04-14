@@ -15,6 +15,7 @@ namespace TourneyPro_Data
         [Required]
         public string Name { get; set; }
         [Required]
+        [Display(Name="Game")]
         public string GamePlayed { get; set; }
         [Required]
         public string Description { get; set; }
@@ -24,8 +25,10 @@ namespace TourneyPro_Data
         [Required]
         public decimal Payout { get; set; }
         [Required]
+        [Display(Name="Fee")]
         public decimal EventFee { get; set; }
         [Required]
+        [Display(Name="Beginning of Event")]
         public DateTime EventBeginning { get; set; }
         [Display(Name ="Tournament Name")]
         public string TournamentName { get; set;}

@@ -21,6 +21,19 @@ namespace TourneyPro.Controllers
             var ordered = list.OrderBy(e => e.Id).ToList();
             return View(ordered);
         }
+        public ActionResult IndexOfPlayer(int? id)
+        {
+            if (id == null)
+            {
+                return Index();
+            }
+            var list = ctx.Attendances.Where(e => e.SiteUserId == id).ToList();
+            if(list.Count == 0 || list == null)
+            {
+                return View();
+            }
+            return View(list);
+        }
         public ActionResult Create()
         {
             return View();

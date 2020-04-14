@@ -31,18 +31,34 @@
             height: 7%;
         }
         body{
-            background-color: lightblue;
+            background-color: #3C5575;
+            color: black;
+        }
+        th{
+            color: black;
+        }
+        td{
+            color: black;
+        }
+        hr{
+            height: 1px;
+            background-color: black;
+            border: none;
         }
         .navbar-header{
-            background-color: #e9ecef;
+            background-color: #51417A;
             width: 100%;
             border-top-left-radius: 0.3rem;
             border-top-right-radius: 0.3rem;
         }
         .navbar-collapse{
-            background-color: #e9ecef;
+            background-color: #51417A;
             border-bottom-left-radius: 0.3rem;
             border-bottom-right-radius: 0.3rem;
+            padding-left: 2rem;
+        }
+        .links{
+            color: black;
         }
     </style>
 
@@ -65,9 +81,9 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Tournaments", "Index", "Tournament")</li>
-                    <li>@Html.ActionLink("Events", "Index", "Event")</li>
-                    <li>@Html.ActionLink("Users", "Index", "SiteUser")</li>
+                    <li class="links">@Html.ActionLink("Tournaments", "Index", "Tournament", null, new { Style = "color:Black;"})</li>
+                    <li class="links">@Html.ActionLink("Events", "Index", "Event", null, new { Style = "color:Black;"})</li>
+                    <li class="links">@Html.ActionLink("Users", "Index", "SiteUser", null, new { Style = "color:Black;"})</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -77,7 +93,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - TournamentPro</p>
         </footer>
     </div>
 
