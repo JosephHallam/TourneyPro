@@ -1,18 +1,25 @@
 ﻿@model TourneyPro_Models.SiteUserDetail
 
+<style>
+    img {
+        width: 20%;
+        height: auto;
+    }
+</style>
 @{
     ViewBag.Title = "Details";
 }
-
 <h2>Details</h2>
 @{
     @*System.Drawing.Image image;
-    using (MemoryStream ms = new MemoryStream(Model.Image))
-    {
-        image = System.Drawing.Image.FromStream(ms);
-    }
-    var goodImage = (System.Drawing.Bitmap)image;
-    @Html.RenderAction(goodImage);*@
+        using (MemoryStream ms = new MemoryStream(Model.Image))
+        {
+            image = System.Drawing.Image.FromStream(ms);
+        }
+        var goodImage = (System.Drawing.Bitmap)image;
+        @Html.RenderAction(goodImage);*@
+    var base64 = Convert.ToBase64String(Model.Image);
+    var imgSrc = String.Format("data:image/png;base64,{0}", base64);
 }
 
 
@@ -20,6 +27,10 @@
 <div>
     <h4>SiteUserDetail</h4>
     <hr />
+    @if (Model.Image != null)
+    {
+        <img src="@imgSrc" class="profPic">
+    }
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Name)
