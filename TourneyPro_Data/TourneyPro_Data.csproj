@@ -119,6 +119,10 @@
     <Compile Include="Migrations\202004141941512_AddedImageColumnSiteUserDetail.designer.cs">
       <DependentUpon>202004141941512_AddedImageColumnSiteUserDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004151639259_EditedDisplayNames.cs" />
+    <Compile Include="Migrations\202004151639259_EditedDisplayNames.designer.cs">
+      <DependentUpon>202004151639259_EditedDisplayNames.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="SiteUser.cs" />
     <Compile Include="Tournament.cs" />
@@ -158,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004141941512_AddedImageColumnSiteUserDetail.resx">
       <DependentUpon>202004141941512_AddedImageColumnSiteUserDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004151639259_EditedDisplayNames.resx">
+      <DependentUpon>202004151639259_EditedDisplayNames.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
