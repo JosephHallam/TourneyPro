@@ -10,17 +10,7 @@
     ViewBag.Title = "Details";
 }
 <h2>Details</h2>
-@{
-    @*System.Drawing.Image image;
-        using (MemoryStream ms = new MemoryStream(Model.Image))
-        {
-            image = System.Drawing.Image.FromStream(ms);
-        }
-        var goodImage = (System.Drawing.Bitmap)image;
-        @Html.RenderAction(goodImage);*@
-    var base64 = Convert.ToBase64String(Model.Image);
-    var imgSrc = String.Format("data:image/png;base64,{0}", base64);
-}
+
 
 
 
@@ -29,7 +19,20 @@
     <hr />
     @if (Model.Image != null)
     {
+        @*System.Drawing.Image image;
+            using (MemoryStream ms = new MemoryStream(Model.Image))
+            {
+                image = System.Drawing.Image.FromStream(ms);
+            }
+            var goodImage = (System.Drawing.Bitmap)image;
+            @Html.RenderAction(goodImage);*@
+        var base64 = Convert.ToBase64String(Model.Image);
+        var imgSrc = String.Format("data:image/png;base64,{0}", base64);
         <img src="@imgSrc" class="profPic">
+    }
+    @if (Model.Image == null)
+    {
+        <img src="~/AssetsFolder/good default prof pic.png" class="profPic" alt="Default Profile Picture" />
     }
     <dl class="dl-horizontal">
         <dt>

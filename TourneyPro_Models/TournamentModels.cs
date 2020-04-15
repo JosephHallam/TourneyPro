@@ -10,6 +10,7 @@ namespace TourneyPro_Models
     public class TournamentCreate
     {
         public string Name { get; set; }
+        [Display(Name = "Beginning of Tournament")]
         public DateTime TournamentBeginning { get; set; }
         public string TrailerEmbedLink { get; set; }
     }
@@ -17,13 +18,14 @@ namespace TourneyPro_Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        [Display(Name = "Beginning of Tournament")]
         public DateTime TournamentBeginning { get; set; }
     }
     public class TournamentDetailAndListItem
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        [Display(Name="Date")]
+        [Display(Name="Beginning of Tournament")]
         public DateTime TournamentBeginning { get; set; }
         [Display(Name ="Events")]
         public string ListOfEventNames { get; set; }

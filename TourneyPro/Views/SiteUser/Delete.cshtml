@@ -1,5 +1,14 @@
 ﻿@model TourneyPro_Data.SiteUser
+    <style>
+        #submitButton {
+            border: 1px solid black;
+            border-radius: 0.4rem;
+        }
 
+            #submitButton:hover {
+                background-color: lightgreen;
+            }
+    </style>
 <h3>Are you sure you want to delete this?</h3>
 <div>
     <h4>SiteUser</h4>
@@ -43,7 +52,7 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <input type="submit" value="Delete" id="submitButton" /> |
             @Html.ActionLink("Back to List", "Index")
         </div>
     }

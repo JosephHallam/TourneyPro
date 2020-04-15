@@ -132,6 +132,11 @@ namespace TourneyPro.Controllers
         private AttendanceService GetService()
         {
             var userId = User.Identity.GetUserId();
+            if (userId == null)
+            {
+                var badGuid = new Guid();
+                return new AttendanceService(badGuid);
+            }
             var Id = new Guid(userId);
             var service = new AttendanceService(Id);
             return service;

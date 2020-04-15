@@ -112,12 +112,12 @@ namespace TourneyPro.Controllers
         private TournamentService GetService()
         {
             var userId = User.Identity.GetUserId();
-            var Id = new Guid(userId);
-            if(Id == null)
+            if(userId == null)
             {
                 var badGuid = new Guid();
                 return new TournamentService(badGuid);
             }
+            var Id = new Guid(userId);
             var service = new TournamentService(Id);
             return service;
         }

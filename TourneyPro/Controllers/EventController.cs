@@ -125,6 +125,11 @@ namespace TourneyPro.Controllers
         private EventService GetService()
         {
             var userId = User.Identity.GetUserId();
+            if (userId == null)
+            {
+                var badGuid = new Guid();
+                return new EventService(badGuid);
+            }
             var Id = new Guid(userId);
             var service = new EventService(Id);
             return service;

@@ -99,6 +99,11 @@ namespace TourneyPro.Controllers
         private SiteUserService GetService()
         {
             var userId = User.Identity.GetUserId();
+            if (userId == null)
+            {
+                var badGuid = new Guid();
+                return new SiteUserService(badGuid);
+            }
             var Id = new Guid(userId);
             var service = new SiteUserService(Id);
             return service;

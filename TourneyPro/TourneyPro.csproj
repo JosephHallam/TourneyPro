@@ -188,6 +188,8 @@
   <ItemGroup>
     <Content Include="AssetsFolder\CollapseButton.png" />
     <Content Include="AssetsFolder\CollapseButtonCropped.png" />
+    <Content Include="AssetsFolder\default prof pic.png" />
+    <Content Include="AssetsFolder\good default prof pic.png" />
     <Content Include="AssetsFolder\menu-icon-png-3-lines-11552739327ppx0vqjddk.png" />
     <Content Include="AssetsFolder\output-onlinepngtools %282%29.png" />
     <Content Include="AssetsFolder\smash64Art.png" />
